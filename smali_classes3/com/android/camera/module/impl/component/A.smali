@@ -1,24 +1,24 @@
-.class public final synthetic Lcom/android/camera/module/impl/component/A;
+.class public final synthetic Lcom/android/camera/module/impl/component/a;
 .super Ljava/lang/Object;
 .source "lambda"
 
 # interfaces
-.implements Lcom/arcsoft/avatar/AvatarConfig$UpdateProgressCallback;
+.implements Ljava/util/function/Consumer;
 
 
 # static fields
-.field public static final synthetic INSTANCE:Lcom/android/camera/module/impl/component/A;
+.field public static final synthetic INSTANCE:Lcom/android/camera/module/impl/component/a;
 
 
 # direct methods
 .method static synthetic constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/android/camera/module/impl/component/A;
+    new-instance v0, Lcom/android/camera/module/impl/component/a;
 
-    invoke-direct {v0}, Lcom/android/camera/module/impl/component/A;-><init>()V
+    invoke-direct {v0}, Lcom/android/camera/module/impl/component/a;-><init>()V
 
-    sput-object v0, Lcom/android/camera/module/impl/component/A;->INSTANCE:Lcom/android/camera/module/impl/component/A;
+    sput-object v0, Lcom/android/camera/module/impl/component/a;->INSTANCE:Lcom/android/camera/module/impl/component/a;
 
     return-void
 .end method
@@ -33,8 +33,12 @@
 
 
 # virtual methods
-.method public final onUpdateProgress(I)V
+.method public final accept(Ljava/lang/Object;)V
     .locals 0
+
+    check-cast p1, Lcom/android/camera/module/BaseModule;
+
+    invoke-static {p1}, Lcom/android/camera/module/impl/component/ConfigChangeImpl;->h(Lcom/android/camera/module/BaseModule;)V
 
     return-void
 .end method

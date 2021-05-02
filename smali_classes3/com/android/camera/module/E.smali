@@ -1,4 +1,4 @@
-.class public final synthetic Lcom/android/camera/module/E;
+.class public final synthetic Lcom/android/camera/module/e;
 .super Ljava/lang/Object;
 .source "lambda"
 
@@ -7,20 +7,16 @@
 
 
 # instance fields
-.field private final synthetic Hi:Lcom/android/camera/module/VideoModule;
-
-.field private final synthetic Li:Z
+.field private final synthetic Hi:Lcom/android/camera/module/Camera2Module;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/android/camera/module/VideoModule;Z)V
+.method public synthetic constructor <init>(Lcom/android/camera/module/Camera2Module;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/module/E;->Hi:Lcom/android/camera/module/VideoModule;
-
-    iput-boolean p2, p0, Lcom/android/camera/module/E;->Li:Z
+    iput-object p1, p0, Lcom/android/camera/module/e;->Hi:Lcom/android/camera/module/Camera2Module;
 
     return-void
 .end method
@@ -28,13 +24,11 @@
 
 # virtual methods
 .method public final run()V
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/android/camera/module/E;->Hi:Lcom/android/camera/module/VideoModule;
+    iget-object p0, p0, Lcom/android/camera/module/e;->Hi:Lcom/android/camera/module/Camera2Module;
 
-    iget-boolean p0, p0, Lcom/android/camera/module/E;->Li:Z
-
-    invoke-virtual {v0, p0}, Lcom/android/camera/module/VideoModule;->x(Z)V
+    invoke-virtual {p0}, Lcom/android/camera/module/Camera2Module;->Mf()V
 
     return-void
 .end method

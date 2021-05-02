@@ -1,34 +1,44 @@
-.class public final synthetic Lcom/android/camera/module/impl/component/D;
+.class public final synthetic Lcom/android/camera/module/impl/component/d;
 .super Ljava/lang/Object;
 .source "lambda"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/util/function/Consumer;
 
 
-# instance fields
-.field private final synthetic Hi:Lcom/android/camera/module/impl/component/MimojiAvatarEngineImpl;
+# static fields
+.field public static final synthetic INSTANCE:Lcom/android/camera/module/impl/component/d;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/android/camera/module/impl/component/MimojiAvatarEngineImpl;)V
+.method static synthetic constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcom/android/camera/module/impl/component/d;
+
+    invoke-direct {v0}, Lcom/android/camera/module/impl/component/d;-><init>()V
+
+    sput-object v0, Lcom/android/camera/module/impl/component/d;->INSTANCE:Lcom/android/camera/module/impl/component/d;
+
+    return-void
+.end method
+
+.method private synthetic constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/android/camera/module/impl/component/D;->Hi:Lcom/android/camera/module/impl/component/MimojiAvatarEngineImpl;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    iget-object p0, p0, Lcom/android/camera/module/impl/component/D;->Hi:Lcom/android/camera/module/impl/component/MimojiAvatarEngineImpl;
+    check-cast p1, Lcom/android/camera/module/BaseModule;
 
-    invoke-virtual {p0}, Lcom/android/camera/module/impl/component/MimojiAvatarEngineImpl;->bg()V
+    invoke-static {p1}, Lcom/android/camera/module/impl/component/ConfigChangeImpl;->j(Lcom/android/camera/module/BaseModule;)V
 
     return-void
 .end method

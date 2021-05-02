@@ -1,34 +1,34 @@
-.class public final synthetic Lcom/android/camera/module/B;
+.class public final synthetic Lcom/android/camera/module/b;
 .super Ljava/lang/Object;
 .source "lambda"
 
 # interfaces
-.implements Lio/reactivex/FlowableOnSubscribe;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field private final synthetic Hi:Lcom/android/camera/module/MiLiveModule;
+.field private final synthetic Hi:Lcom/android/camera/module/Camera2Module;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/android/camera/module/MiLiveModule;)V
+.method public synthetic constructor <init>(Lcom/android/camera/module/Camera2Module;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/module/B;->Hi:Lcom/android/camera/module/MiLiveModule;
+    iput-object p1, p0, Lcom/android/camera/module/b;->Hi:Lcom/android/camera/module/Camera2Module;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final subscribe(Lio/reactivex/FlowableEmitter;)V
+.method public final run()V
     .locals 0
 
-    iget-object p0, p0, Lcom/android/camera/module/B;->Hi:Lcom/android/camera/module/MiLiveModule;
+    iget-object p0, p0, Lcom/android/camera/module/b;->Hi:Lcom/android/camera/module/Camera2Module;
 
-    invoke-virtual {p0, p1}, Lcom/android/camera/module/MiLiveModule;->a(Lio/reactivex/FlowableEmitter;)V
+    invoke-virtual {p0}, Lcom/android/camera/module/Camera2Module;->Kf()V
 
     return-void
 .end method

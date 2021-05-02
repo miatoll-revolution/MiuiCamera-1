@@ -1,136 +1,84 @@
-.class public Lcom/bumptech/glide/load/model/B;
+.class Lcom/bumptech/glide/load/model/b;
 .super Ljava/lang/Object;
-.source "UnitModelLoader.java"
+.source "ByteArrayLoader.java"
 
 # interfaces
-.implements Lcom/bumptech/glide/load/model/t;
+.implements Lcom/bumptech/glide/load/model/c$b;
 
 
 # annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/bumptech/glide/load/model/B$a;,
-        Lcom/bumptech/glide/load/model/B$b;
-    }
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/bumptech/glide/load/model/c$a;->a(Lcom/bumptech/glide/load/model/x;)Lcom/bumptech/glide/load/model/t;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
 .end annotation
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "<Model:",
         "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;",
-        "Lcom/bumptech/glide/load/model/t<",
-        "TModel;TModel;>;"
+        "Lcom/bumptech/glide/load/model/c$b<",
+        "Ljava/nio/ByteBuffer;",
+        ">;"
     }
 .end annotation
 
 
-# static fields
-.field private static final INSTANCE:Lcom/bumptech/glide/load/model/B;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/bumptech/glide/load/model/B<",
-            "*>;"
-        }
-    .end annotation
-.end field
+# instance fields
+.field final synthetic this$0:Lcom/bumptech/glide/load/model/c$a;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    .line 1
-    new-instance v0, Lcom/bumptech/glide/load/model/B;
-
-    invoke-direct {v0}, Lcom/bumptech/glide/load/model/B;-><init>()V
-
-    sput-object v0, Lcom/bumptech/glide/load/model/B;->INSTANCE:Lcom/bumptech/glide/load/model/B;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
+.method constructor <init>(Lcom/bumptech/glide/load/model/c$a;)V
     .locals 0
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
 
     .line 1
+    iput-object p1, p0, Lcom/bumptech/glide/load/model/b;->this$0:Lcom/bumptech/glide/load/model/c$a;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static getInstance()Lcom/bumptech/glide/load/model/B;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">()",
-            "Lcom/bumptech/glide/load/model/B<",
-            "TT;>;"
-        }
-    .end annotation
-
-    .line 1
-    sget-object v0, Lcom/bumptech/glide/load/model/B;->INSTANCE:Lcom/bumptech/glide/load/model/B;
-
-    return-object v0
-.end method
-
 
 # virtual methods
-.method public a(Ljava/lang/Object;IILcom/bumptech/glide/load/g;)Lcom/bumptech/glide/load/model/t$a;
+.method public bridge synthetic e([B)Ljava/lang/Object;
     .locals 0
-    .param p1    # Ljava/lang/Object;
-        .annotation build Landroid/support/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p4    # Lcom/bumptech/glide/load/g;
-        .annotation build Landroid/support/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TModel;II",
-            "Lcom/bumptech/glide/load/g;",
-            ")",
-            "Lcom/bumptech/glide/load/model/t$a<",
-            "TModel;>;"
-        }
-    .end annotation
 
     .line 1
-    new-instance p0, Lcom/bumptech/glide/load/model/t$a;
+    invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/model/b;->e([B)Ljava/nio/ByteBuffer;
 
-    new-instance p2, Lcom/bumptech/glide/e/d;
-
-    invoke-direct {p2, p1}, Lcom/bumptech/glide/e/d;-><init>(Ljava/lang/Object;)V
-
-    new-instance p3, Lcom/bumptech/glide/load/model/B$b;
-
-    invoke-direct {p3, p1}, Lcom/bumptech/glide/load/model/B$b;-><init>(Ljava/lang/Object;)V
-
-    invoke-direct {p0, p2, p3}, Lcom/bumptech/glide/load/model/t$a;-><init>(Lcom/bumptech/glide/load/c;Lcom/bumptech/glide/load/a/d;)V
+    move-result-object p0
 
     return-object p0
 .end method
 
-.method public c(Ljava/lang/Object;)Z
+.method public e([B)Ljava/nio/ByteBuffer;
     .locals 0
-    .param p1    # Ljava/lang/Object;
-        .annotation build Landroid/support/annotation/NonNull;
-        .end annotation
-    .end param
+
+    .line 2
+    invoke-static {p1}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public ga()Ljava/lang/Class;
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(TModel;)Z"
+            "()",
+            "Ljava/lang/Class<",
+            "Ljava/nio/ByteBuffer;",
+            ">;"
         }
     .end annotation
 
-    const/4 p0, 0x1
+    .line 1
+    const-class p0, Ljava/nio/ByteBuffer;
 
-    return p0
+    return-object p0
 .end method

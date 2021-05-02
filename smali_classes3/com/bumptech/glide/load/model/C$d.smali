@@ -1,15 +1,14 @@
-.class public Lcom/bumptech/glide/load/model/C$d;
+.class public Lcom/bumptech/glide/load/model/c$d;
 .super Ljava/lang/Object;
-.source "UriLoader.java"
+.source "ByteArrayLoader.java"
 
 # interfaces
 .implements Lcom/bumptech/glide/load/model/u;
-.implements Lcom/bumptech/glide/load/model/C$c;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/bumptech/glide/load/model/C;
+    value = Lcom/bumptech/glide/load/model/c;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -21,29 +20,19 @@
     value = {
         "Ljava/lang/Object;",
         "Lcom/bumptech/glide/load/model/u<",
-        "Landroid/net/Uri;",
-        "Ljava/io/InputStream;",
-        ">;",
-        "Lcom/bumptech/glide/load/model/C$c<",
+        "[B",
         "Ljava/io/InputStream;",
         ">;"
     }
 .end annotation
 
 
-# instance fields
-.field private final Ol:Landroid/content/ContentResolver;
-
-
 # direct methods
-.method public constructor <init>(Landroid/content/ContentResolver;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput-object p1, p0, Lcom/bumptech/glide/load/model/C$d;->Ol:Landroid/content/ContentResolver;
 
     return-void
 .end method
@@ -56,31 +45,12 @@
     return-void
 .end method
 
-.method public a(Landroid/net/Uri;)Lcom/bumptech/glide/load/a/d;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/net/Uri;",
-            ")",
-            "Lcom/bumptech/glide/load/a/d<",
-            "Ljava/io/InputStream;",
-            ">;"
-        }
-    .end annotation
-
-    .line 1
-    new-instance v0, Lcom/bumptech/glide/load/a/o;
-
-    iget-object p0, p0, Lcom/bumptech/glide/load/model/C$d;->Ol:Landroid/content/ContentResolver;
-
-    invoke-direct {v0, p0, p1}, Lcom/bumptech/glide/load/a/o;-><init>(Landroid/content/ContentResolver;Landroid/net/Uri;)V
-
-    return-object v0
-.end method
-
 .method public a(Lcom/bumptech/glide/load/model/x;)Lcom/bumptech/glide/load/model/t;
-    .locals 0
+    .locals 1
+    .param p1    # Lcom/bumptech/glide/load/model/x;
+        .annotation build Landroid/support/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation build Landroid/support/annotation/NonNull;
     .end annotation
 
@@ -90,16 +60,20 @@
             "Lcom/bumptech/glide/load/model/x;",
             ")",
             "Lcom/bumptech/glide/load/model/t<",
-            "Landroid/net/Uri;",
+            "[B",
             "Ljava/io/InputStream;",
             ">;"
         }
     .end annotation
 
-    .line 2
-    new-instance p1, Lcom/bumptech/glide/load/model/C;
+    .line 1
+    new-instance p1, Lcom/bumptech/glide/load/model/c;
 
-    invoke-direct {p1, p0}, Lcom/bumptech/glide/load/model/C;-><init>(Lcom/bumptech/glide/load/model/C$c;)V
+    new-instance v0, Lcom/bumptech/glide/load/model/d;
+
+    invoke-direct {v0, p0}, Lcom/bumptech/glide/load/model/d;-><init>(Lcom/bumptech/glide/load/model/c$d;)V
+
+    invoke-direct {p1, v0}, Lcom/bumptech/glide/load/model/c;-><init>(Lcom/bumptech/glide/load/model/c$b;)V
 
     return-object p1
 .end method

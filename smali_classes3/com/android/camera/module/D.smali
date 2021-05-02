@@ -1,4 +1,4 @@
-.class public final synthetic Lcom/android/camera/module/D;
+.class public final synthetic Lcom/android/camera/module/d;
 .super Ljava/lang/Object;
 .source "lambda"
 
@@ -7,16 +7,16 @@
 
 
 # instance fields
-.field private final synthetic Hi:Lcom/android/camera/module/VideoBase;
+.field private final synthetic Hi:Lcom/android/camera/protocol/ModeProtocol$TopAlert;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/android/camera/module/VideoBase;)V
+.method public synthetic constructor <init>(Lcom/android/camera/protocol/ModeProtocol$TopAlert;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/module/D;->Hi:Lcom/android/camera/module/VideoBase;
+    iput-object p1, p0, Lcom/android/camera/module/d;->Hi:Lcom/android/camera/protocol/ModeProtocol$TopAlert;
 
     return-void
 .end method
@@ -26,9 +26,9 @@
 .method public final run()V
     .locals 0
 
-    iget-object p0, p0, Lcom/android/camera/module/D;->Hi:Lcom/android/camera/module/VideoBase;
+    iget-object p0, p0, Lcom/android/camera/module/d;->Hi:Lcom/android/camera/protocol/ModeProtocol$TopAlert;
 
-    invoke-virtual {p0}, Lcom/android/camera/module/VideoBase;->Uf()V
+    invoke-static {p0}, Lcom/android/camera/module/Camera2Module$9;->a(Lcom/android/camera/protocol/ModeProtocol$TopAlert;)V
 
     return-void
 .end method

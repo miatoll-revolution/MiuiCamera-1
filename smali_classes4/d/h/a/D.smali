@@ -1,6 +1,6 @@
-.class public Ld/h/a/D;
+.class public Ld/h/a/d;
 .super Ljava/lang/Object;
-.source "SineEaseInInterpolator.java"
+.source "BounceEaseInInterpolator.java"
 
 # interfaces
 .implements Landroid/view/animation/Interpolator;
@@ -19,26 +19,22 @@
 
 # virtual methods
 .method public getInterpolation(F)F
-    .locals 2
-
-    float-to-double p0, p1
-
-    const-wide v0, 0x3ff921fb54442d18L    # 1.5707963267948966
-
-    mul-double/2addr p0, v0
+    .locals 1
 
     .line 1
-    invoke-static {p0, p1}, Ljava/lang/Math;->cos(D)D
+    new-instance p0, Ld/h/a/f;
 
-    move-result-wide p0
+    invoke-direct {p0}, Ld/h/a/f;-><init>()V
 
-    double-to-float p0, p0
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    neg-float p0, p0
+    sub-float p1, v0, p1
 
-    const/high16 p1, 0x3f800000    # 1.0f
+    invoke-virtual {p0, p1}, Ld/h/a/f;->getInterpolation(F)F
 
-    add-float/2addr p0, p1
+    move-result p0
 
-    return p0
+    sub-float/2addr v0, p0
+
+    return v0
 .end method

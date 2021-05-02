@@ -1,143 +1,112 @@
-.class Lcom/bumptech/glide/load/resource/bitmap/C;
-.super Ljava/lang/Object;
-.source "VideoDecoder.java"
+.class public Lcom/bumptech/glide/load/resource/bitmap/c;
+.super Lcom/bumptech/glide/load/b/b/b;
+.source "BitmapDrawableResource.java"
 
 # interfaces
-.implements Lcom/bumptech/glide/load/f$a;
+.implements Lcom/bumptech/glide/load/engine/v;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/bumptech/glide/load/resource/bitmap/VideoDecoder;
-.end annotation
-
-.annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
-    name = null
-.end annotation
-
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Ljava/lang/Object;",
-        "Lcom/bumptech/glide/load/f$a<",
-        "Ljava/lang/Integer;",
-        ">;"
+        "Lcom/bumptech/glide/load/b/b/b<",
+        "Landroid/graphics/drawable/BitmapDrawable;",
+        ">;",
+        "Lcom/bumptech/glide/load/engine/v;"
     }
 .end annotation
 
 
 # instance fields
-.field private final buffer:Ljava/nio/ByteBuffer;
+.field private final Xi:Lcom/bumptech/glide/load/engine/bitmap_recycle/d;
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 1
+.method public constructor <init>(Landroid/graphics/drawable/BitmapDrawable;Lcom/bumptech/glide/load/engine/bitmap_recycle/d;)V
+    .locals 0
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x4
+    invoke-direct {p0, p1}, Lcom/bumptech/glide/load/b/b/b;-><init>(Landroid/graphics/drawable/Drawable;)V
 
     .line 2
-    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/C;->buffer:Ljava/nio/ByteBuffer;
+    iput-object p2, p0, Lcom/bumptech/glide/load/resource/bitmap/c;->Xi:Lcom/bumptech/glide/load/engine/bitmap_recycle/d;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a([BLjava/lang/Integer;Ljava/security/MessageDigest;)V
-    .locals 2
-    .param p1    # [B
-        .annotation build Landroid/support/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Ljava/lang/Integer;
-        .annotation build Landroid/support/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p3    # Ljava/security/MessageDigest;
-        .annotation build Landroid/support/annotation/NonNull;
-        .end annotation
-    .end param
-
-    if-nez p2, :cond_0
-
-    return-void
-
-    .line 2
-    :cond_0
-    invoke-virtual {p3, p1}, Ljava/security/MessageDigest;->update([B)V
-
-    .line 3
-    iget-object p1, p0, Lcom/bumptech/glide/load/resource/bitmap/C;->buffer:Ljava/nio/ByteBuffer;
-
-    monitor-enter p1
-
-    .line 4
-    :try_start_0
-    iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/C;->buffer:Ljava/nio/ByteBuffer;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
-
-    .line 5
-    iget-object p0, p0, Lcom/bumptech/glide/load/resource/bitmap/C;->buffer:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
-
-    move-result p2
-
-    invoke-virtual {p0, p2}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->array()[B
-
-    move-result-object p0
-
-    invoke-virtual {p3, p0}, Ljava/security/MessageDigest;->update([B)V
-
-    .line 6
-    monitor-exit p1
-
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
-.end method
-
-.method public bridge synthetic a([BLjava/lang/Object;Ljava/security/MessageDigest;)V
+.method public T()Ljava/lang/Class;
     .locals 0
-    .param p1    # [B
-        .annotation build Landroid/support/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Ljava/lang/Object;
-        .annotation build Landroid/support/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p3    # Ljava/security/MessageDigest;
-        .annotation build Landroid/support/annotation/NonNull;
-        .end annotation
-    .end param
+    .annotation build Landroid/support/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/lang/Class<",
+            "Landroid/graphics/drawable/BitmapDrawable;",
+            ">;"
+        }
+    .end annotation
 
     .line 1
-    check-cast p2, Ljava/lang/Integer;
+    const-class p0, Landroid/graphics/drawable/BitmapDrawable;
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/bumptech/glide/load/resource/bitmap/C;->a([BLjava/lang/Integer;Ljava/security/MessageDigest;)V
+    return-object p0
+.end method
+
+.method public getSize()I
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/bumptech/glide/load/b/b/b;->drawable:Landroid/graphics/drawable/Drawable;
+
+    check-cast p0, Landroid/graphics/drawable/BitmapDrawable;
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lcom/bumptech/glide/util/l;->j(Landroid/graphics/Bitmap;)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public initialize()V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/bumptech/glide/load/b/b/b;->drawable:Landroid/graphics/drawable/Drawable;
+
+    check-cast p0, Landroid/graphics/drawable/BitmapDrawable;
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/graphics/Bitmap;->prepareToDraw()V
+
+    return-void
+.end method
+
+.method public recycle()V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/c;->Xi:Lcom/bumptech/glide/load/engine/bitmap_recycle/d;
+
+    iget-object p0, p0, Lcom/bumptech/glide/load/b/b/b;->drawable:Landroid/graphics/drawable/Drawable;
+
+    check-cast p0, Landroid/graphics/drawable/BitmapDrawable;
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
+
+    move-result-object p0
+
+    invoke-interface {v0, p0}, Lcom/bumptech/glide/load/engine/bitmap_recycle/d;->a(Landroid/graphics/Bitmap;)V
 
     return-void
 .end method

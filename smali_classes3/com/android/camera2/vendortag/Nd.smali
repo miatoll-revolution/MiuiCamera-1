@@ -1,4 +1,4 @@
-.class public final synthetic Lcom/android/camera2/vendortag/Nd;
+.class public final synthetic Lcom/android/camera2/vendortag/nd;
 .super Ljava/lang/Object;
 .source "lambda"
 
@@ -7,18 +7,18 @@
 
 
 # static fields
-.field public static final synthetic INSTANCE:Lcom/android/camera2/vendortag/Nd;
+.field public static final synthetic INSTANCE:Lcom/android/camera2/vendortag/nd;
 
 
 # direct methods
 .method static synthetic constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/android/camera2/vendortag/Nd;
+    new-instance v0, Lcom/android/camera2/vendortag/nd;
 
-    invoke-direct {v0}, Lcom/android/camera2/vendortag/Nd;-><init>()V
+    invoke-direct {v0}, Lcom/android/camera2/vendortag/nd;-><init>()V
 
-    sput-object v0, Lcom/android/camera2/vendortag/Nd;->INSTANCE:Lcom/android/camera2/vendortag/Nd;
+    sput-object v0, Lcom/android/camera2/vendortag/nd;->INSTANCE:Lcom/android/camera2/vendortag/nd;
 
     return-void
 .end method
@@ -36,7 +36,7 @@
 .method public final get()Ljava/lang/Object;
     .locals 0
 
-    invoke-static {}, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->tg()Ljava/lang/String;
+    invoke-static {}, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->Qh()Ljava/lang/String;
 
     move-result-object p0
 

@@ -1,93 +1,159 @@
-.class Lcom/bumptech/glide/load/engine/D;
+.class final Lcom/bumptech/glide/load/engine/d;
 .super Ljava/lang/Object;
-.source "ResourceRecycler.java"
+.source "DataCacheKey.java"
 
-
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/bumptech/glide/load/engine/D$a;
-    }
-.end annotation
+# interfaces
+.implements Lcom/bumptech/glide/load/c;
 
 
 # instance fields
-.field private Vn:Z
+.field private final lm:Lcom/bumptech/glide/load/c;
 
-.field private final handler:Landroid/os/Handler;
+.field private final qm:Lcom/bumptech/glide/load/c;
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 3
+.method constructor <init>(Lcom/bumptech/glide/load/c;Lcom/bumptech/glide/load/c;)V
+    .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    new-instance v0, Landroid/os/Handler;
+    iput-object p1, p0, Lcom/bumptech/glide/load/engine/d;->lm:Lcom/bumptech/glide/load/c;
 
     .line 3
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v1
-
-    new-instance v2, Lcom/bumptech/glide/load/engine/D$a;
-
-    invoke-direct {v2}, Lcom/bumptech/glide/load/engine/D$a;-><init>()V
-
-    invoke-direct {v0, v1, v2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
-
-    iput-object v0, p0, Lcom/bumptech/glide/load/engine/D;->handler:Landroid/os/Handler;
+    iput-object p2, p0, Lcom/bumptech/glide/load/engine/d;->qm:Lcom/bumptech/glide/load/c;
 
     return-void
 .end method
 
 
 # virtual methods
-.method g(Lcom/bumptech/glide/load/engine/A;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/bumptech/glide/load/engine/A<",
-            "*>;)V"
-        }
-    .end annotation
+.method public equals(Ljava/lang/Object;)Z
+    .locals 3
 
     .line 1
-    invoke-static {}, Lcom/bumptech/glide/util/l;->Lk()V
+    instance-of v0, p1, Lcom/bumptech/glide/load/engine/d;
 
-    .line 2
-    iget-boolean v0, p0, Lcom/bumptech/glide/load/engine/D;->Vn:Z
-
-    const/4 v1, 0x1
+    const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 3
-    iget-object p0, p0, Lcom/bumptech/glide/load/engine/D;->handler:Landroid/os/Handler;
+    .line 2
+    check-cast p1, Lcom/bumptech/glide/load/engine/d;
 
-    invoke-virtual {p0, v1, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+    .line 3
+    iget-object v0, p0, Lcom/bumptech/glide/load/engine/d;->lm:Lcom/bumptech/glide/load/c;
+
+    iget-object v2, p1, Lcom/bumptech/glide/load/engine/d;->lm:Lcom/bumptech/glide/load/c;
+
+    invoke-interface {v0, v2}, Lcom/bumptech/glide/load/c;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object p0, p0, Lcom/bumptech/glide/load/engine/d;->qm:Lcom/bumptech/glide/load/c;
+
+    iget-object p1, p1, Lcom/bumptech/glide/load/engine/d;->qm:Lcom/bumptech/glide/load/c;
+
+    invoke-interface {p0, p1}, Lcom/bumptech/glide/load/c;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 v1, 0x1
+
+    :cond_0
+    return v1
+.end method
+
+.method fj()Lcom/bumptech/glide/load/c;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/bumptech/glide/load/engine/d;->lm:Lcom/bumptech/glide/load/c;
+
+    return-object p0
+.end method
+
+.method public hashCode()I
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/bumptech/glide/load/engine/d;->lm:Lcom/bumptech/glide/load/c;
+
+    invoke-interface {v0}, Lcom/bumptech/glide/load/c;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    .line 2
+    iget-object p0, p0, Lcom/bumptech/glide/load/engine/d;->qm:Lcom/bumptech/glide/load/c;
+
+    invoke-interface {p0}, Lcom/bumptech/glide/load/c;->hashCode()I
+
+    move-result p0
+
+    add-int/2addr v0, p0
+
+    return v0
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 2
+
+    .line 1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "DataCacheKey{sourceKey="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lcom/bumptech/glide/load/engine/d;->lm:Lcom/bumptech/glide/load/c;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", signature="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p0, p0, Lcom/bumptech/glide/load/engine/d;->qm:Lcom/bumptech/glide/load/c;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 p0, 0x7d
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
+    return-object p0
+.end method
 
-    goto :goto_0
+.method public updateDiskCacheKey(Ljava/security/MessageDigest;)V
+    .locals 1
+    .param p1    # Ljava/security/MessageDigest;
+        .annotation build Landroid/support/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 4
-    :cond_0
-    iput-boolean v1, p0, Lcom/bumptech/glide/load/engine/D;->Vn:Z
+    .line 1
+    iget-object v0, p0, Lcom/bumptech/glide/load/engine/d;->lm:Lcom/bumptech/glide/load/c;
 
-    .line 5
-    invoke-interface {p1}, Lcom/bumptech/glide/load/engine/A;->recycle()V
+    invoke-interface {v0, p1}, Lcom/bumptech/glide/load/c;->updateDiskCacheKey(Ljava/security/MessageDigest;)V
 
-    const/4 p1, 0x0
+    .line 2
+    iget-object p0, p0, Lcom/bumptech/glide/load/engine/d;->qm:Lcom/bumptech/glide/load/c;
 
-    .line 6
-    iput-boolean p1, p0, Lcom/bumptech/glide/load/engine/D;->Vn:Z
+    invoke-interface {p0, p1}, Lcom/bumptech/glide/load/c;->updateDiskCacheKey(Ljava/security/MessageDigest;)V
 
-    :goto_0
     return-void
 .end method

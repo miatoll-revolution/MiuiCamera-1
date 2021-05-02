@@ -1,34 +1,36 @@
-.class public final synthetic Lcom/android/camera/module/impl/component/C;
+.class public final synthetic Lcom/android/camera/module/impl/component/c;
 .super Ljava/lang/Object;
 .source "lambda"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/util/function/Consumer;
 
 
 # instance fields
-.field private final synthetic Hi:Lcom/android/camera/module/impl/component/MimojiAvatarEngineImpl;
+.field private final synthetic Hi:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/android/camera/module/impl/component/MimojiAvatarEngineImpl;)V
+.method public synthetic constructor <init>(Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/module/impl/component/C;->Hi:Lcom/android/camera/module/impl/component/MimojiAvatarEngineImpl;
+    iput-boolean p1, p0, Lcom/android/camera/module/impl/component/c;->Hi:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    iget-object p0, p0, Lcom/android/camera/module/impl/component/C;->Hi:Lcom/android/camera/module/impl/component/MimojiAvatarEngineImpl;
+    iget-boolean p0, p0, Lcom/android/camera/module/impl/component/c;->Hi:Z
 
-    invoke-virtual {p0}, Lcom/android/camera/module/impl/component/MimojiAvatarEngineImpl;->cg()V
+    check-cast p1, Lcom/android/camera/module/BaseModule;
+
+    invoke-static {p0, p1}, Lcom/android/camera/module/impl/component/ConfigChangeImpl;->b(ZLcom/android/camera/module/BaseModule;)V
 
     return-void
 .end method
